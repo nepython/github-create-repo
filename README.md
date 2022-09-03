@@ -18,12 +18,14 @@
   * [**Error Handling**](#error-handling)
   * [**Installation**](#installation)
   * [**Migrations**](#migrations)
+  * [**Change Client ID and Client Secret**](#change-client-id-and-client-secret)
   * [**Running the app locally**](#running-the-app-locally)
+  * [**Running the app in production**](#running-the-app-in-production)
   * [**Test**](#test)
 
 ## **Usage**
 ![User Interface](/README-images/ezgif.com-optimize.gif)
-* Open to the index page.
+* Open the index page.
 * Click on `Authorize GitHub`. It will redirect to GitHub OAuth.
 * Click on `Create Repository`. All Done!
 
@@ -92,7 +94,11 @@ $ npm run build
 ## **Migrations**
 :warning: Do not forget to run the migration before starting the app. It needs to be ran only once.
 ```bash
-npm run migrate
+# Create migrations
+$ npm run migration-generate
+
+# Run the migrations
+$ npm run migrate
 ```
 
 ## **Change Client ID and Client Secret**
@@ -110,6 +116,9 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## **Running the app in production**
+Check this [Digital Ocean article](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04).
 
 ## **Test**
 Unit tests for this app have not been added.
